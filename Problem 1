@@ -1,0 +1,112 @@
+//This program is the solution to problem #1
+
+#include <iostream>
+using namespace std;
+
+int add(int x, int y)
+{
+	int a;
+	a = x + y;
+	return a;
+}
+
+int subtract(int x, int y)
+{
+	int b;
+	b =  x - y;
+	return b;
+}
+
+int multiply(int x, int y)
+{
+	int c;
+	c = x * y;
+	return c;
+}
+
+int divide(int x, int y)
+{
+	int d;
+	d = x / y;
+	return d;
+}
+
+int modul(int x, int y)
+{
+	int e;
+	e = x % y;
+	return e;
+}
+
+
+int main()
+{
+	int x, y, choice;
+	char answer;
+	bool exit = false;
+	
+	do {
+		cout << "MENU:\n";
+		cout << "\t1. Add\n" << "\t2. Subtract\n";
+		cout << "\t3. Multiply\n" << "\t4. Divide\n";
+		cout << "\t5. Modulus\n";
+	
+		cout << "\nEnter your choice: ";
+		cin >> choice;
+		cout << "Enter your two numbers: ";
+		cin >> x >> y;
+		
+		switch(choice)
+		{
+			if (choice >= 1 && choice <= 5)
+			{
+				case 1:
+				cout << "\nResult: " << add(x, y);
+				break;
+		
+				case 2:
+					cout << "\nResult: " << subtract(x, y);
+					break;
+		
+				case 3:
+					cout << "\nResult: " << multiply(x, y);
+					break;
+		
+				case 4:
+					if (y > 0)
+					{
+						cout << "\nResult: " << divide(x, y);
+					}
+		
+					else
+						cout << "\nInvalid input";
+					break;
+			
+				case 5:
+					cout << "\nResult: " << modul(x, y);
+					break;
+		
+				default:
+					cout << "\nInvalid input for operations.";
+					exit = true;
+			}
+			
+		}
+		
+		cout << "\nContinue? (press Y if yes and other keys if no) ";
+		cin >> answer;
+		
+		if (answer == 'y' || answer == 'Y')
+		{
+			exit = false;
+		}
+		
+		else
+		{
+			exit = true;
+		}
+		
+	}	while (!exit);
+	
+	return 0;
+}
