@@ -5,7 +5,7 @@ int main()
 {
 	int i, j, n, number, elements[17];
 	
-	cout << "Selection Sorting...\n";
+	cout << "Bubble Sorting...\n";
 	cout << "Enter the array size: ";
 	cin >> n;
 	cout << "Enter the " << n << " elements: ";
